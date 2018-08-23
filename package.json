@@ -1,0 +1,24 @@
+{
+  "name": "hyper-theme-dark-pastel",
+  "version": "0.1.0",
+  "description": "A dark hyper theme with pastel colors",
+  "contributors": [
+    {
+      "name": "Thomas Buhk",
+      "email": "tbuhk@me.com",
+      "url": "https://github.com/2case"
+    }
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/2case/hyper-theme-dark-pastel",
+  "files": ["index.js"],
+  "keywords": [
+    "hyper",
+    "hyper-theme",
+    "hyperterm",
+    "theme",
+    "ui",
+    "dark",
+    "pastel"
+  ]
+}
