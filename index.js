@@ -1,18 +1,7 @@
 module.exports.onWindow = browserWindow =>
     browserWindow.setVibrancy("ultra-dark");
 
-const foregroundColor = '#c7c7c7';
-const backgroundColor = "#000";
-const tabBackgroundColor = "#000";
-const tabActiveBackgroundColor = "rgba(255, 255, 255, .05)";
-const tabActiveAccentColor = "#7070ff";
-const borderColor = '#333';
-const cursorColor = 'rgba(255, 180, 144, 0.8)';
-const cursorAccentColor = '#000';
-const selectionColor = 'rgba(69, 77, 149, 0.5)';
-const searchBackgroundColor = '#333';
-const searchForgroundColor = '#c7c7c7';
-
+// Default terminal colors
 const black = '#000000';
 const red = '#ff8272';
 const green = '#b4fa72';
@@ -30,6 +19,24 @@ const lightMagenta = '#ffb1fe';
 const lightCyan = '#e5e6fe';
 const lightWhite = '#feffff';
 
+// Additional named colors
+const darkGrey = '#333333';
+const lightGrey = '#c7c7c7';
+
+// User interface colors
+const foregroundColor = lightGrey;
+const backgroundColor = black;
+const tabBackgroundColor = black;
+const tabActiveBackgroundColor = "rgba(255, 255, 255, .05)";
+const tabActiveAccentColor = blue;
+const borderColor = darkGrey;
+const cursorColor = 'rgba(255, 180, 144, 0.8)';
+const cursorAccentColor = black;
+const selectionColor = 'rgba(69, 77, 149, 0.5)';
+const searchBackgroundColor = darkGrey;
+const searchForgroundColor = lightGrey;
+
+// Init default configuration
 const defaultConfig = {
     fontFamily: '"DejaVu Sans Mono for Powerline", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
     fontSize: 14,
@@ -51,6 +58,7 @@ const checkConfig = function (config, setting) {
     );
 };
 
+// Override runtime configuration
 exports.decorateConfig = config =>
     Object.assign({}, config, {
         fontFamily: checkConfig(config, "fontFamily"),
